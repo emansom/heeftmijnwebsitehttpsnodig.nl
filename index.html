@@ -72,24 +72,24 @@
 		Look, this discussion isn't about PKI. It's the best system we've got for right now. Deal with it and secure your site. Use <a href="https://tools.ietf.org/html/rfc6844">CAA records</a> to restrict which CAs can issue certificates for your site, then cross your fingers and hope transparency and oversight works (it does, so far).
 	</p>
 
-	<h2>"HTTPS doesn't hide the size of the content, leaking clues to attackers."</h2>
+	<h2>"HTTPS verbergt niet de grootte van versleutelde berichten, wat aanwijzingen over de data lekt aan hackers."</h2>
 	<p>
-		TLS 1.3 and HTTP/2 have <a href="https://tlswg.github.io/tls13-spec/#rfc.section.5.4">padding frames</a> to inflate the size of the ciphertext.
+		TLS 1.3 en HTTP/2 maken gebruik van <a href="https://tlswg.github.io/tls13-spec/#rfc.section.5.4">padding frames</a> om de grootte van de versleutelde berichten zo willekeurig mogelijk te maken.
 	</p>
 
-	<h2>"HTTPS doesn't hide the DNS lookup."</h2>
+	<h2>"HTTPS verbergt niet de DNS lookup."</h2>
 	<p>
-		Of course not. DNS != HTTP. But is that really a valid reason not to encrypt the connection between your website and its visitors?? (Hint: no.)
+		Natuurlijk niet. DNS is niet HTTP. Alleen is dat echt een valide reden om de rest niet te versleutelen?? (Hint: nee)
 	</p>
 
-	<h2>"HTTPS is slow."</h2>
+	<h2>"HTTPS is sloom."</h2>
 	<p>
-		<a href="https://istlsfastyet.com/">No it's not.</a> Sites with modern servers load faster over HTTPS than over HTTP because of HTTP/2.
+		<a href="https://istlsfastyet.com/">Nee dat is het niet.</a> Websites met moderne servers laden sneller over HTTPS dan over HTTP door HTTP/2.
 	</p>
 
-	<h2>"Phishing sites use HTTPS."</h2>
+	<h2>"Phishing websites gebruiken HTTPS."</h2>
 	<p>
-		... so you won't?
+		... en daarom jij niet?
 	</p>
 
 	<h2>"Our site displays ads over HTTP."</h2>
