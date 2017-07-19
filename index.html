@@ -57,14 +57,14 @@
 		Het werkt zonder configuratie als <a href="https://caddyserver.com">Caddy</a> je webserver is. Ja, het verniewen van certificaten inbegrepen. Geen omkijken naar nodig. Voor andere webservers kan HTTPS geautomatiseerd worden door <a href="https://letsencrypt.org/docs/client-options/">een Let's Encrypt client naar uw keuze te gebruiken</a>.
 	</p>
 
-	<h2>"De aanvallers kunnen mijn site nog steeds nadoen, zelfs als ik HTTPS gebruikt."</h2>
+	<h2>"Hackers kunnen nog steeds een kopie van mijn website maken, zelfs al gebruik ik HTTPS."</h2>
 	<p>
 		Ze kunnen het proberen, maar zolang de geheime sleutels geheim blijven zullen webbrowsers waarschuwingen geven als de aanvallers een niet-passend paar of niet-geldige TLS certificaten presenteren. Als de aanvaller helemaal geen HTTPS gebruikt zullen webbrowsers de namaak pagina markeren als onveilig. Op deze manier garandeerd HTTPS  <b>echtheid</b>.
 	</p>
 
-	<h2>"Domain-validated (DV) certificates aren't secure."</h2>
+	<h2>"Domain-validated (DV) certificaten zijn onveilig."</h2>
 	<p>
-		Yes they are. Just don't lose control over your DNS and choose a <a href="https://letsencrypt.org">competent certificate authority</a> (as opposed to <a href="https://www.godaddy.com/garage/godaddy/information-about-ssl-bug/">less competent</a> or <a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/eUAKwjihhBs/rpxMXjZHCQAJ">troublesome</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1311713">ones</a>). There is absolutely no difference in the cryptography in a DV certificate compared to that of an extended validation (EV) certificate.
+    Ze zijn wel veilig. Verlies geen controle over je DNS en kies een <a href="https://letsencrypt.org">bekwaam certificaatautoriteit</a> (inplaats van <a href="https://www.godaddy.com/garage/godaddy/information-about-ssl-bug/">minder bekwame</a> of <a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/eUAKwjihhBs/rpxMXjZHCQAJ">zelfs pijnlijk</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1311713">slechte</a>). Er is absoluut geen verschil in de versleuteling in een DV certificaat vergeleken met dat van een <a href="https://nl.wikipedia.org/wiki/Uitgebreid_gevalideerd_SSL-certificaat">uitgebreid gevalideerd SSL-certificaat</a>.
 	</p>
 
 	<h2>"But CAs can misissue for my site any day &lt;...or any other complaint about the CA system&gt;."</h2>
@@ -97,9 +97,9 @@
 		Sorry, not sorry. Doesn't change the fact that <b>your site still needs HTTPS</b>. Switching to HTTPS with ads still over HTTP will cause mixed content warnings in browsers, so you better figure out a cute way to wiggle out of that ad publishing contract that looked really attractive when you first signed it, or convince your ad network to move to HTTPS before you do.
 	</p>
 
-	<h2>"It works over HTTP just fine."</h2>
+	<h2>"Het werkt met HTTP net zo goed."</h2>
 	<p>
-		That's what <a href="https://arstechnica.com/security/2017/03/firefox-gets-complaint-for-labeling-unencrypted-login-page-insecure/">Oil and Gas International</a> thought, too. Until browsers started flagging HTTP pages as insecure.
+		Dat is wat <a href="https://arstechnica.com/security/2017/03/firefox-gets-complaint-for-labeling-unencrypted-login-page-insecure/">Oil and Gas International</a> ook beweerde. Tot dat browsers HTTP als onveilig markeerde.
 	</p>
 
 	<h2>"But TLS proxies break the guarantees of HTTPS."</h2>
@@ -108,7 +108,9 @@
 	</p>
 
 	<h2>"At least I can still serve my site over both HTTP and HTTPS."</h2>
+  <h2>"Iniedergeval kan ik mijn website beide over HTTP en HTTPS serveren"</h2>
 	<p>
+    De enige rol die poort 80 op je server zou moeten spelen is dat van het doorsturen van alle aanvragen naar poort 443.
 		The only reason you should open port 80 on your server is to redirect all requests to port 443 and then close the connection on port 80. (Someday, maybe we can drop port 80 altogether.)
 	</p>
 
